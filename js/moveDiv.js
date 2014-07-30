@@ -25,7 +25,3 @@ function moveDivTag(myDiv, time, from, to) {
         }
     }, time)
 }
-
-function slideHeaderDiv(myDiv) {
-
-}

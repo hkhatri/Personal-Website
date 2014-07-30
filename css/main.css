@@ -23,12 +23,21 @@
 .header_child_class {
     height: 30px;
     background-color: #EFEFE7;
-    width: 799px;
+    width: 789px;
     position: fixed;
     z-index: 99;
-    border: 1px;
+    border: 2px;
     border-style:solid;
-    border-color:#B0B0B0;
+    border-color:#E0E0D1;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.header_text_details {
+    color: blue;
+    line-height: 25px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-weight: bold;
 }
 
 .body_class {
@@ -95,6 +104,6 @@
     position: relative;
 }
 
-h3 {
+h3, p {
     margin: 0 auto;
 }
