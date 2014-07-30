@@ -10,7 +10,7 @@
     font-size: 2em;
     font-family: "Brush Script MT", cursive;
     background-image:url('../img/blue_gradient.jpg');
-    background-repeat:repeat-x, repeat-y;
+    background-repeat:repeat-x;
     background-size: 40px 40px;
     z-index: 100;
     left: 0px;

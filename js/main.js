@@ -8,6 +8,7 @@ var global_height;
 function mainInitialize() {
     getScreenSize();
     window.onscroll = slideHeaderChild;
+    rotateCoverImage();
 }
 
 function getScreenSize() {
