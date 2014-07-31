@@ -13,9 +13,9 @@ function moveDivTag(myDiv, time, from, to) {
 
     var startInterval = setInterval(function () {
         if (start > end) {
-            start -= 1;
+            start -= 5;
         } else {
-            start += 1;
+            start += 5;
         }
 
         myDiv.style.top = start + "px";

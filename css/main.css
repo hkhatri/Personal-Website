@@ -21,9 +21,8 @@
 }
 
 .header_child_class {
-    height: 30px;
-    background-color: #EFEFE7;
-    width: 789px;
+    height: 80px;
+    width: 796px;
     position: fixed;
     z-index: 99;
     border: 2px;
@@ -31,13 +30,19 @@
     border-color:#E0E0D1;
     padding-left: 5px;
     padding-right: 5px;
+    top: -45px;
+    margin:0;
+    padding:0;
 }
 
-.header_text_details {
-    color: blue;
-    line-height: 25px;
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    font-weight: bold;
+tr td:first-child, tr td:first-child + td {
+    border-right: solid;
+    border-color:#DDDDDD;
+}
+
+.menu_icons_class {
+    width: 50px;
+    height: 55px;
 }
 
 .body_class {
@@ -98,12 +103,6 @@
 
 /* Start of Main content CSS */
 
-.main_data_header_class {
-    background-color: black;
-    color: white;
-    position: relative;
-}
-
-h3, p {
-    margin: 0 auto;
+td {
+cursor: pointer
 }
