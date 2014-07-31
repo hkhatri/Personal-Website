@@ -30,6 +30,9 @@ function getScreenSize() {
     global_height = myHeight;
 }
 
+/* The following code takes care of sliding the Drop Down Menu
+   when the user scrolls
+ */
 function slideHeaderChild() {
     var myDiv = document.getElementById("header_child");
     var top = window.pageYOffset || document.documentElement.scrollTop;
@@ -43,28 +46,25 @@ function slideHeaderChild() {
 }
 
 
+/* The following code takes care of changing the background color of the Drop Down Menu */
+
 function changeBGColorMouseOver(e) {
-    var evt=window.event || e;
-    if (!evt.target) //if event obj doesn't support e.target, presume it does e.srcElement
-        evt.target=evt.srcElement; //extend obj with custom e.target prop
-    //do something with evt.target, which is cross browser
-    console.log(evt);
-    if (evt.target.tagName.toLowerCase() === 'img') {
-        document.getElementById(evt.target.offsetParent.id).style.backgroundColor = "#CCCCCC";
-    } else if (evt.target.tagName.toLowerCase() === 'td') {
-        document.getElementById(evt.target.id).style.backgroundColor = "#CCCCCC";
-    }
+    changeBGColorTo(e, "#CCCCCC");
 }
 
 function changeBGColorMouseOut(e) {
+    changeBGColorTo(e, "#EFEFE7");
+}
+
+function changeBGColorTo(e, color) {
     var evt=window.event || e;
-    if (!evt.target) //if event obj doesn't support e.target, presume it does e.srcElement
-        evt.target=evt.srcElement; //extend obj with custom e.target prop
-    //do something with evt.target, which is cross browser
+    if (!evt.target) {
+        evt.target = evt.srcElement;
+    }
     console.log(evt);
     if (evt.target.tagName.toLowerCase() === 'img') {
-        document.getElementById(evt.target.offsetParent.id).style.backgroundColor = "#EFEFE7";
+        document.getElementById(evt.target.offsetParent.id).style.backgroundColor = color;
     } else if (evt.target.tagName.toLowerCase() === 'td') {
-        document.getElementById(evt.target.id).style.backgroundColor = "#EFEFE7";
+        document.getElementById(evt.target.id).style.backgroundColor = color;
     }
 }

@@ -2,10 +2,17 @@
  * Created by admin on 7/28/2014.
  */
 
-/*
- Time Function
- */
 
+/*
+ The following code takes care of sliding the Drop Down Menu
+ when the user scrolls.
+
+ Arguments:
+    myDiv = The DIV element to mov
+    time = Time in ms
+    from = start position of div
+    to = end position of div
+ */
 function moveDivTag(myDiv, time, from, to) {
     var start = from;
     var end = to;
