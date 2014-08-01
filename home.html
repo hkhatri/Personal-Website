@@ -7,6 +7,7 @@
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/moveDiv.js"></script>
     <script type="text/javascript" src="js/rotateImage.js"></script>
+    <script type="text/javascript" src="js/onConnectIcons.js"></script>
     <title>Hilay Khatri</title>
 </head>
 
@@ -17,7 +18,7 @@
 <div class="header_child_wrapper_class">
     <div id="header_child" class="header_child_class">
         <table id="menu_table_id" class="menu_table_class" style="width: 100%; background-color: #EFEFE7;">
-            <tr id="menu_icons_row_id" onmouseover='changeBGColorMouseOver(event)' onmouseout='changeBGColorMouseOut(event)'>
+            <tr id="menu_icons_row_id" class="menu_icons_row_class"  onmouseover='changeBGColorMouseOver(event)' onmouseout='changeBGColorMouseOut(event)'>
                 <td id="td1" align="center" style="width: 33%;"><img class="menu_icons_class" src="img/work.png" alt=""/> <br> Work</td>
                 <td id="td2" align="center" style="width: 33%;"><img class="menu_icons_class" src="img/education.png" alt=""/> <br> Education</td>
                 <td id="td3" align="center" style="width: 33%;"><img class="menu_icons_class" src="img/play.png" alt=""/> <br> Hobbies</td>
@@ -36,7 +37,27 @@
         <img id="profile" src="img/profile_pic.jpg" class="wall_profile_class">
     </div>
 
-    <div id="main_data_div" class="main_data_class">
+    <div class="main_data_class" style="height: 26px; padding: 2px 2px 2px 2px; z-index: 10;">
+        <table style="width: 150px;" style="margin: auto 0px;">
+            <tr class="menu_connect_row_class" onclick="connectOnClick(event)">
+                <td><img id="email_icon_id" style="width: 20px;" src="img/email.png" alt=""/> </td>
+                <td><img id="linkedin_icon_id" style="width: 20px;" src="img/linkedin.jpg" alt=""/> </td>
+                <td><img id="fb_icon_id" style="width: 20px;" src="img/fb.jpg" alt=""/></td>
+                <td><img id="resume_icon_id" style="width: 20px;" src="img/resume.png" alt=""/></td>
+            </tr>
+        </table>
+    </div>
+
+    <br>
+
+    <div id="main_data_div" class="main_data_class" style="height: 900px">
+    <img src="img/header_bg.png" style="height: 20px; width: 400px">
+    <br>Welcome to my Personal Website. <br>
+
+    I currently work at Cisco, Inc as a Software Engineer. <br>
+
+    My primary assignment is to enhance Cisco's IOS XR to support NCS4000 and NCS6000 series core routers.
+    I spend major part of my day patching in bugs and helping others to improve the overall quality of the product.
     </div>
 </div>
 

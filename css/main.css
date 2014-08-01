@@ -35,9 +35,10 @@
     padding:0;
 }
 
-tr td:first-child, tr td:first-child + td {
+tr.menu_icons_row_class td:first-child, tr.menu_icons_row_class td:first-child + td {
     border-right: solid;
     border-color:#DDDDDD;
+    cursor: pointer;
 }
 
 .menu_icons_class {
@@ -79,7 +80,7 @@ tr td:first-child, tr td:first-child + td {
     position: relative;
     margin:10px 0 0 -10px;
     background: white;
-    top: -135px;
+    top: -177px;
     left: 575px;
     -moz-border-radius: 100px / 100px;
     -webkit-border-radius: 100px / 100px;
@@ -87,22 +88,27 @@ tr td:first-child, tr td:first-child + td {
     border: 5px;
     border-style:solid;
     border-color:white;
+    z-index: 98;
 }
 
 .main_data_class {
-    height: 1000px;
+    height: 100px;
     position: relative;
     top: 10px;
     background-color: #F0F5F5;
-    z-index: -1;
+    z-index: 1;
     border: 2px;
     border-style:solid;
     border-color:#E0E0D1;
 }
 
 
-/* Start of Main content CSS */
+/*
+ *Start of Main content CSS
+ */
 
-td {
-cursor: pointer
+/* CSS for connected links */
+
+.menu_connect_row_class td * {
+cursor: pointer;
 }

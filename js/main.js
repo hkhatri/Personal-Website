@@ -1,5 +1,5 @@
 /**
- * Created by admin on 7/27/2014.
+ * Created by Hilay Khatri on 7/27/2014.
  */
 
 var global_width;
@@ -45,8 +45,16 @@ function slideHeaderChild() {
     }
 }
 
-
 /* The following code takes care of changing the background color of the Drop Down Menu */
+
+function getTargetObj(e) {
+    var evt=window.event || e;
+    if (!evt.target) {
+        evt.target = evt.srcElement;
+    }
+
+    return evt;
+}
 
 function changeBGColorMouseOver(e) {
     changeBGColorTo(e, "#CCCCCC");
@@ -57,14 +65,11 @@ function changeBGColorMouseOut(e) {
 }
 
 function changeBGColorTo(e, color) {
-    var evt=window.event || e;
-    if (!evt.target) {
-        evt.target = evt.srcElement;
-    }
-    console.log(evt);
+    var evt = getTargetObj(e);
     if (evt.target.tagName.toLowerCase() === 'img') {
         document.getElementById(evt.target.offsetParent.id).style.backgroundColor = color;
     } else if (evt.target.tagName.toLowerCase() === 'td') {
         document.getElementById(evt.target.id).style.backgroundColor = color;
     }
 }
+
