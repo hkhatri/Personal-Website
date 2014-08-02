@@ -22,7 +22,7 @@
 
 .header_child_class {
     height: 80px;
-    width: 796px;
+    width: 797px;
     position: fixed;
     z-index: 99;
     border: 2px;
@@ -61,6 +61,7 @@ tr.menu_icons_row_class td:first-child, tr.menu_icons_row_class td:first-child +
 
 .wall_pictures_class {
     height: 350px;
+    width: 800px;
 }
 
 .wall_cover_div_class {
@@ -80,21 +81,20 @@ tr.menu_icons_row_class td:first-child, tr.menu_icons_row_class td:first-child +
     position: relative;
     margin:10px 0 0 -10px;
     background: white;
-    top: -177px;
+    top: -185px;
     left: 575px;
     -moz-border-radius: 100px / 100px;
     -webkit-border-radius: 100px / 100px;
     border-radius: 100px / 100px;
     border: 5px;
     border-style:solid;
-    border-color:white;
+    border-color:#F0F5F5;
     z-index: 98;
 }
 
 .main_data_class {
-    height: 100px;
+    height: auto;
     position: relative;
-    top: 10px;
     background-color: #F0F5F5;
     z-index: 1;
     border: 2px;
@@ -110,5 +110,39 @@ tr.menu_icons_row_class td:first-child, tr.menu_icons_row_class td:first-child +
 /* CSS for connected links */
 
 .menu_connect_row_class td * {
-cursor: pointer;
+    cursor: pointer;
+}
+
+.main_data_content_header {
+    width: 793px;
+    height: 25px;
+    font-size: 1em;
+    line-height: 20px;
+    background-color: #B2D1FF;
+    margin: 0;
+    color: white;
+    font-family: Georgia, serif;
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+.main_content_bg_table_class {
+    width: 100%;
+    margin: auto 0px;
+}
+
+.main_content_bg_td_class {
+    height: 100px;
+    width: 200px;
+    padding: 15px;
+}
+
+
+/* Copyright CSS */
+
+.copyright div {
+    font-size: 0.7em;
+    float: left;
+    margin: 0px auto;
+    color: #A7B3CC
 }
