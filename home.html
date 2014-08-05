@@ -8,20 +8,21 @@
     <script type="text/javascript" src="js/moveDiv.js"></script>
     <script type="text/javascript" src="js/rotateImage.js"></script>
     <script type="text/javascript" src="js/onConnectIcons.js"></script>
+    <script type="text/javascript" src="js/dynamicPageLoad.js"></script>
     <title>Hilay Khatri</title>
 </head>
 
-<body class="body_class" onload="mainInitialize()">
+<body id="main_body_id" class="body_class" onload="mainInitialize()">
 
 <div id="header" class="header_class"> Hilay Khatri </div>
 
 <div class="header_child_wrapper_class">
     <div id="header_child" class="header_child_class">
         <table id="menu_table_id" class="menu_table_class" style="width: 100%; background-color: #EFEFE7;">
-            <tr id="menu_icons_row_id" class="menu_icons_row_class"  onmouseover='changeBGColorMouseOver(event)' onmouseout='changeBGColorMouseOut(event)'>
-                <td id="td1" align="center" style="width: 33%;"><img class="menu_icons_class" src="img/work.png" alt=""/> <br> Work</td>
-                <td id="td2" align="center" style="width: 33%;"><img class="menu_icons_class" src="img/education.png" alt=""/> <br> Education</td>
-                <td id="td3" align="center" style="width: 33%;"><img class="menu_icons_class" src="img/play.png" alt=""/> <br> Hobbies</td>
+            <tr id="menu_icons_row_id" class="menu_icons_row_class" onclick="moveScrollTo(event);"  onmouseover='changeBGColorMouseOver(event)' onmouseout='changeBGColorMouseOut(event)'>
+                <td id="td1" align="center" style="width: 33%;"><img id="td1_img1" class="menu_icons_class" src="img/work.png" alt=""/> <br> Work</td>
+                <td id="td2" align="center" style="width: 33%;"><img id="td2_img2" class="menu_icons_class" src="img/education.png" alt=""/> <br> Education</td>
+                <td id="td3" align="center" style="width: 33%;"><img id="td3_img3" class="menu_icons_class" src="img/play.png" alt=""/> <br> Hobbies</td>
             </tr>
         </table>
     </div>
@@ -93,20 +94,7 @@
             </table>
         </p>
     </div>
-
     <br>
-
-    <div class="copyright" style="margin: 0px auto;">
-        <hr style="margin: 0px auto; color: lightsteelblue">
-        <div style="float: left">
-            Logos, trademarks, characters and imagery are property of their respective owners.
-        </div>
-        <div style="float: right">
-            Hilay Khatri &#169 2014
-        </div>
-    </div>
-
-
 </div>
 
 

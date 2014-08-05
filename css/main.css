@@ -38,8 +38,12 @@
 tr.menu_icons_row_class td:first-child, tr.menu_icons_row_class td:first-child + td {
     border-right: solid;
     border-color:#DDDDDD;
+}
+
+#menu_icons_row_id td {
     cursor: pointer;
 }
+
 
 .menu_icons_class {
     width: 50px;
