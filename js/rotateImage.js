@@ -4,11 +4,11 @@
 
 function rotateCoverImage() {
     var i = 0;
-    var timer = setInterval(function() {
-        var coverDiv = document.getElementById("cover");
-        i = (i%5);
-        coverDiv.src = "img/cover_" + i + ".jpg";
-        i++;
-    }, 5000)
-
+    var timer = setInterval(function () {
+            var coverDiv = document.getElementById("cover");
+            i = (i % 5);
+            coverDiv.src = "img/cover_" + i + ".jpg";
+            i++;
+        }, 5000);
+    return timer;
 }

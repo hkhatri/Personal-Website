@@ -9,13 +9,12 @@ var data;
 
 function mainInitialize() {
     updateScreenSizeInformation();
+    this.home = true;
     window.onscroll = setInterval(function(){slideHeaderChild()}, 200);
-    rotateCoverImage();
+    this.timer = rotateCoverImage();
     this.education = false;
     this.experience = false;
     this.copyright = false;
-
-    var body = document.getElementById("main_body_id");
 }
 
 function updateScreenSizeInformation() {
@@ -59,21 +58,25 @@ function slideHeaderChild() {
     var myDiv = document.getElementById("header_child");
     var top = window.pageYOffset || document.documentElement.scrollTop;
 
-    if (top > 100 && !myDiv.initialized) {
-        moveDivTag(myDiv, 10, -45, 40);
-    } else if (top < 100 && myDiv.initialized) {
-        moveDivTag(myDiv, 10, 40, -45);
-        myDiv.initialized = false;
-    }
-
-    if(page_height - global_height  === top) {
-        if(!this.education) {
-            myAjaxCall("pages/education.html");
-            this.education = true;
-        } else if(!this.copyright) {
-            myAjaxCall("pages/copyright.html");
-            this.copyright = true;
+    if(this.home) {
+        if (top > 100 && !myDiv.initialized) {
+            moveDivTag(myDiv, 10, -45, 40);
+        } else if (top < 100 && myDiv.initialized) {
+            moveDivTag(myDiv, 10, 40, -45);
+            myDiv.initialized = false;
         }
+
+        if (page_height - global_height === top) {
+            if (!this.education) {
+                myAjaxCall("pages/skills.html", "append");
+                this.education = true;
+            } else if (!this.copyright) {
+                myAjaxCall("pages/copyright.html", "append");
+                this.copyright = true;
+            }
+        }
+    } else {
+        myDiv.style.top = 40;
     }
 }
 
@@ -105,10 +108,24 @@ function changeBGColorTo(e, color) {
     }
 }
 
-function moveScrollTo(e) {
-    var evt = getTargetObj(e);
-    if ((evt.target.id == "td2" || evt.target.id == "td2_img2") && !this.education) {
-        alert('clicked Edu');
-    }
+function changeCurrentDataToEducation() {
+    myAjaxCall("pages/education.html", "replace");
 }
 
+
+function changeCurrentDataToHome() {
+    myAjaxCall("pages/home.html", "replace");
+}
+
+function moveScrollTo(e) {
+    var evt = getTargetObj(e);
+    clearInterval(this.timer);
+
+    if (evt.target.id == "td2" || evt.target.id == "td2_img2") {
+        this.home = false;
+        changeCurrentDataToEducation();
+    } else if (evt.target.id == "td4" || evt.target.id == "td4_img4") {
+        changeCurrentDataToHome();
+        mainInitialize();
+    }
+}

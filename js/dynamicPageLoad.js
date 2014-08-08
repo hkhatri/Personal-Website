@@ -2,7 +2,7 @@
  * Created by Hilay Khatri on 8/4/2014.
  */
 
-function myAjaxCall(url)
+function myAjaxCall(url, action)
 {
     var xmlhttp;
     if (window.XMLHttpRequest)
@@ -17,7 +17,11 @@ function myAjaxCall(url)
     {
         if (xmlhttp.readyState==4 && xmlhttp.status==200)
         {
-            document.getElementById("main_content_id").innerHTML +=xmlhttp.responseText;
+            if(action == "append") {
+                document.getElementById("main_content_id").innerHTML += xmlhttp.responseText;
+            } else if (action == "replace") {
+                document.getElementById("main_content_id").innerHTML = xmlhttp.responseText;
+            }
         }
     }
     xmlhttp.open("GET", url, true);

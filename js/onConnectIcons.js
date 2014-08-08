@@ -26,6 +26,11 @@ function openResumeApp() {
     window.open("doc/resume.pdf",'_blank');
 }
 
+function openGitApp() {
+    var uname = "hkhatri";
+    window.open("https://github.com/" + uname,'_blank');
+}
+
 function connectOnClick(e) {
     var evt = getTargetObj(e);
 
@@ -37,5 +42,7 @@ function connectOnClick(e) {
         openLinkedinApp();
     } else if (evt.target.id == "fb_icon_id") {
         openFbApp();
+    } else if (evt.target.id == "github_icon_id") {
+        openGitApp();
     }
 }

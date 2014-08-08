@@ -35,7 +35,7 @@
     padding:0;
 }
 
-tr.menu_icons_row_class td:first-child, tr.menu_icons_row_class td:first-child + td {
+tr.menu_icons_row_class td:first-child, tr.menu_icons_row_class td:first-child + td, tr.menu_icons_row_class td:first-child + td + td  {
     border-right: solid;
     border-color:#DDDDDD;
 }
@@ -121,7 +121,7 @@ tr.menu_icons_row_class td:first-child, tr.menu_icons_row_class td:first-child +
     width: 793px;
     height: 25px;
     font-size: 1em;
-    line-height: 20px;
+    line-height: 25px;
     background-color: #B2D1FF;
     margin: 0;
     color: white;
