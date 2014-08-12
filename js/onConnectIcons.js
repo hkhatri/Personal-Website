@@ -14,21 +14,26 @@ function openEmailApp() {
 
 function openLinkedinApp() {
     var uname = "hilay-khatri";
-    window.open("https://www.linkedin.com/pub/" + uname + "/45/241/97",'_blank');
+    window.open("https://www.linkedin.com/pub/" + uname + "/45/241/97", '_blank');
 }
 
 function openFbApp() {
     var uname = "hilay.khatri";
-    window.open("https://www.facebook.com/" + uname,'_blank');
+    window.open("https://www.facebook.com/" + uname, '_blank');
 }
 
 function openResumeApp() {
-    window.open("doc/resume.pdf",'_blank');
+    window.open("doc/resume.pdf", '_blank');
 }
 
 function openGitApp() {
     var uname = "hkhatri";
-    window.open("https://github.com/" + uname,'_blank');
+    window.open("https://github.com/" + uname ,'_blank');
+}
+
+function openThesisApp() {
+    var uname = "1840.16/8393";
+    window.open("http://www.lib.ncsu.edu/resolver/" + uname, '_blank');
 }
 
 function connectOnClick(e) {
@@ -44,5 +49,7 @@ function connectOnClick(e) {
         openFbApp();
     } else if (evt.target.id == "github_icon_id") {
         openGitApp();
+    } else if (evt.target.id == "thesis_icon_id") {
+        openThesisApp();
     }
 }

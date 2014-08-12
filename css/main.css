@@ -85,7 +85,7 @@ tr.menu_icons_row_class td:first-child, tr.menu_icons_row_class td:first-child +
     position: relative;
     margin:10px 0 0 -10px;
     background: white;
-    top: -185px;
+    top: -187px;
     left: 575px;
     -moz-border-radius: 100px / 100px;
     -webkit-border-radius: 100px / 100px;
@@ -101,7 +101,8 @@ tr.menu_icons_row_class td:first-child, tr.menu_icons_row_class td:first-child +
     position: relative;
     background-color: #F0F5F5;
     z-index: 1;
-    border: 2px;
+    border: 1px;
+    border-bottom: 2px;
     border-style:solid;
     border-color:#E0E0D1;
 }
@@ -141,6 +142,11 @@ tr.menu_icons_row_class td:first-child, tr.menu_icons_row_class td:first-child +
     padding: 15px;
 }
 
+.main_content_skills_class {
+    height: 100px;
+    width: 100px;
+    padding: 15px;
+}
 
 /* Copyright CSS */
 
@@ -149,4 +155,8 @@ tr.menu_icons_row_class td:first-child, tr.menu_icons_row_class td:first-child +
     float: left;
     margin: 0px auto;
     color: #A7B3CC
+}
+
+p {
+font-family: Cambria, Georgia, serif;
 }
