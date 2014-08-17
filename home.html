@@ -4,7 +4,9 @@
 
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/widget.css">
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/widget.js"></script>
     <script type="text/javascript" src="js/moveDiv.js"></script>
     <script type="text/javascript" src="js/rotateImage.js"></script>
     <script type="text/javascript" src="js/onConnectIcons.js"></script>
@@ -12,7 +14,7 @@
     <title>Hilay Khatri</title>
 </head>
 
-<body id="main_body_id" class="body_class" onload="mainInitialize()">
+<body id="main_body_id" class="body_class" onload="mainInitialize();">
 
 <div id="header" class="header_class"> Hilay Khatri </div>
 
@@ -29,75 +31,7 @@
     </div>
 </div>
 
+<div id="main_content_id" class="main_content"></div>
 
-<div id="main_content_id" class="main_content">
-
-    <div id="wall_pictures" class="wall_pictures_class">
-        <div id="wall_cover" class="wall_cover_div_class">
-            <img id="cover" src="img/cover_0.jpg" class="wall_cover_class">
-        </div>
-
-        <img id="profile" src="img/profile_pic.jpg" class="wall_profile_class">
-    </div>
-
-    <div class="main_data_class" style="height: 26px; padding: 3px; z-index: 10; border: 0px; ">
-        <table style="width: 150px;" style="margin: auto 0px;">
-            <tr class="menu_connect_row_class" onclick="connectOnClick(event)">
-                <td><img id="email_icon_id" style="width: 20px;" src="img/email.png" alt=""/> </td>
-                <td><img id="linkedin_icon_id" style="width: 20px;" src="img/linkedin.jpg" alt=""/> </td>
-                <td><img id="fb_icon_id" style="width: 20px;" src="img/fb.jpg" alt=""/></td>
-                <td><img id="resume_icon_id" style="width: 20px;" src="img/resume.png" alt=""/></td>
-                <td><img id="github_icon_id" style="width: 20px;" src="img/github.png" alt=""/></td>
-                <td><img id="thesis_icon_id" style="width: 20px;" src="img/thesis.png" alt=""/></td>
-            </tr>
-        </table>
-    </div>
-
-    <br>
-
-    <div class="main_data_class">
-        <p class="main_data_content_header">Introduction</p>
-        <p style="text-align: justify; margin: 5px;">
-            Hilay Khatri graduated from North Carolina State University with a Masters degree in Computer Science.
-            Currently, he works at Cisco Systems, Inc. as a software engineer. <br><br>
-
-            Over the last few years, he had received several opportunities to work in all aspects of software engineering from architecting back-end to designing front-end. <br><br>
-
-            With industrial work experience in companies like Cisco Systems Inc, Riverbed Inc, Red Hat Inc, and Tata Consultancy Service Inc, he holds a wealth of
-            experience with strong belief to deliver a product with highest quality.
-        </p>
-    </div>
-
-    <br>
-
-    <div class="main_data_class">
-        <p class="main_data_content_header">Background</p>
-        <p>
-            <table class="main_content_bg_table_class">
-                <tr>
-                    <td width="50%"><img src="img/cisco.png" class="main_content_bg_td_class"/> </td>
-                    <td align="center">
-                        <p>
-                            Software Engineer II <br>
-                            3700 Cisco Way, <br>
-                            San Jose, CA 95134
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="50%"><img src="img/ncsu.jpg" class="main_content_bg_td_class" alt=""/> </td>
-                    <td align="center">
-                        <p>
-                            Department of Computer Science <br>
-                            890 Oval Drive, <br>
-                            Raleigh, NC 27695 <br>
-                        </p>
-                    </td>
-                </tr>
-            </table>
-        </p>
-    </div>
-    <br>
-</div>
 </body>
 </html>

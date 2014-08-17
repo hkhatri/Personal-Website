@@ -18,10 +18,11 @@ function myAjaxCall(url, action)
         if (xmlhttp.readyState==4 && xmlhttp.status==200)
         {
             if(action == "append") {
-                document.getElementById("main_content_id").innerHTML += xmlhttp.responseText;
+                document.getElementById("main_content_id").innerHTML += xmlhttp.responseText + "<br>";
             } else if (action == "replace") {
                 document.getElementById("main_content_id").innerHTML = xmlhttp.responseText;
             }
+            slideHeaderChild();
         }
     }
     xmlhttp.open("GET", url, true);

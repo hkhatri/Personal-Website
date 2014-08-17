@@ -1,0 +1,41 @@
+.widget_main_data_class {
+    position: relative;
+    background-color: #F0F5F5;
+    display: block;
+    z-index: 1;
+    border: 1px;
+    border-bottom: 2px;
+    border-style:solid;
+    border-color:#E0E0D1;
+}
+
+.widget_main_data_content_header {
+    width: 793px;
+    height: auto;
+    font-size: 1em;
+    line-height: 25px;
+    background-color: #B2D1FF;
+    margin: 0;
+    color: white;
+    font-family: Georgia, serif;
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+.widget_main_content_bg_table_class {
+     width: 100%;
+     margin: auto 0px;
+ }
+
+.widget_main_content_bg_td_class {
+    height: auto;
+    width: 200px;
+    padding: 15px;
+}
+
+.widget_main_content_description_details {
+    margin:auto 0px;
+    width: 750px;
+    text-align: justify;
+    padding: 0 25px 25px 25px;
+}
