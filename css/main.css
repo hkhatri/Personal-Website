@@ -10,9 +10,10 @@
     font-family: "Brush Script MT", cursive;
     background-image:url('../img/blue_gradient.jpg');
     background-repeat:repeat-x;
-    background-size: 40px 40px;
+    background-size: 1800px 50px;
     z-index: 100;
     left: 0px;
+    box-shadow: 1px 1px 5px #777777;
 }
 
 .header_child_wrapper_class {
@@ -22,17 +23,12 @@
 
 .header_child_class {
     height: 77px;
-    width: 798px;
+    width: 800px;
     position: fixed;
     z-index: 99;
-    border: 2px;
-    border-style:solid;
-    border-color:#E0E0D1;
-    padding-left: 5px;
-    padding-right: 5px;
     top: -50px;
-    margin:0;
-    padding:0;
+    margin:0px;
+    padding:0px;
 }
 
 tr.menu_icons_row_class td:first-child, tr.menu_icons_row_class td:first-child + td, tr.menu_icons_row_class td:first-child + td + td  {
@@ -105,6 +101,8 @@ tr.menu_icons_row_class td:first-child, tr.menu_icons_row_class td:first-child +
     border-bottom: 2px;
     border-style:solid;
     border-color:#E0E0D1;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 
@@ -142,6 +140,12 @@ tr.menu_icons_row_class td:first-child, tr.menu_icons_row_class td:first-child +
     padding: 15px;
 }
 
+.main_content_bg_td_class_edu {
+    height: 150px;
+    width: 150px;
+    padding: 15px;
+}
+
 .main_content_skills_class {
     height: 100px;
     width: 100px;
@@ -158,10 +162,28 @@ tr.menu_icons_row_class td:first-child, tr.menu_icons_row_class td:first-child +
     z-index: 5;
 }
 
-h3 {
+h3, h4 {
     margin: 3px auto;
+    display: inline;
 }
 
 p, div {
 font-family: Cambria, Georgia, serif;
+}
+
+.main_content_description_details_research {
+    margin:auto 0px;
+    width: 750px;
+    text-align: justify;
+    padding: 25px;
+}
+
+.research_p {
+    color: cornflowerblue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
 }

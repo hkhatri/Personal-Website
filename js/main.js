@@ -12,7 +12,12 @@ var work_data = [
         title: "Software Engineer II",
         start: "Aug-2013",
         end: "Current",
-        details: "Good work",
+        details: "At Cisco, I worked on adding features and enhancments for Cisco IOS XR that runs on NCS6000 and NCS4000 series routers. <br><br>" +
+                 "I started working on enhancing NPU (Network Processing Unit) driver code to ease integration of new Optics and Line Cards. " +
+                 "Next, I obtained ownership of maintaining Management Ethenet Port's infrastructure. " +
+                 "Later, I worked on enchancing a library that maintains and publishes identfiers for higher level Hardware present in the Chassis using lexical analysis and token parsing. " +
+                 "Currently, I am working on developing the infrastruture for adding support of new optics type. " +
+                 "As time passed, I started working on multiple components. On the way, I gained ownership of several components, providing technical support and enchacning them as per requirements.",
         icon: "img/cisco.png"
     },
     {
@@ -39,7 +44,8 @@ var work_data = [
         end: "Aug-2012",
         details: "At Redhat, I got an opportunity to work from backend to frontend gaining valuable experience. I also gained valuable experience working on RHEL which is a Unix based OS system." + "<br><br>" +
                  "I started my internship by converting a backend of an application called “BeerShift” from php to JAVA. This was a very valuable experience as it helped me to architect a backend. It also involved applying strong object oriented programming skills in JAVA and database management skills. RestEasy framework was used to build RestFul services and no SQL database called MongoDB was used to store information. Some of the major features supported by this backend included authenticating users, adding beers drank by users, searching beers, displaying all beers drank by all users." +"<br><br>" +
-                 "Next, I worked an application called 'Gardenshift' on Red Hats PaaS (OpenShift). Again, my contribution for this app was to architect both backend and frontend. The backend was developed using JAVA with no SQL database called MongoDB while frontend was developed using jQuery library. RestEasy framework was used that provided Restful Services over the Web. This type of web services can be easily executed using Javascript (Ajax) technology to create a dynamic UI. The biggest advantage of this design is that it doesn’t require reloading or moving between the pages since the contents of the web page are updated dynamically. This type of technology is heavily used in ‘Gmail’ and ‘Facebook’. Some of the major features implemented includes managing pictures uploaded by users, friend system, Wall Post, Feedback System, Notification System, Private Messaging, updating profile pictures, etc.",
+                 "Next, I worked an application called 'Gardenshift' on Red Hats PaaS (OpenShift). Again, my contribution for this app was to architect both backend and frontend. The backend was developed using JAVA with no SQL database called MongoDB while frontend was developed using jQuery library. RestEasy framework was used that provided Restful Services over the Web. This type of web services can be easily executed using Javascript (Ajax) technology to create a dynamic UI. The biggest advantage of this design is that it doesn’t require reloading or moving between the pages since the contents of the web page are updated dynamically. This type of technology is heavily used in ‘Gmail’ and ‘Facebook’. Some of the major features implemented includes managing pictures uploaded by users, friend system, Wall Post, Feedback System, Notification System, Private Messaging, updating profile pictures, etc. " +
+                 "This application can be accessed <a href='http://gardenshift-khatri.rhcloud.com/'>here<a>",
         icon: "img/redhat.png"
     },
     {
@@ -47,7 +53,8 @@ var work_data = [
         title: "Project Trainee",
         start: "Jan-2011",
         end: "Apr-2011",
-        details: "At TCS, I started my training by working on developing shell scripts. These scripts were developed for processing data related to millions of phone numbers from different carriers in India. These scripts would convert data from one format to another, find errors with the aim to discover unusual discrepancies in the data. Major part of these shell scripts were written using “awk” for processing texts. This helped me to gain valuable experience working on Unix based OS system to automate data processing. " + "<br><br>" +
+        details: "At TCS, I worked on developing shell scripts, automating data processing and developing tests cases for a new framework developed for an application. <br><br> " +
+                 "I started my training by making myslef familiar with UNIX environment and understand its power to automate task. I developed several shell scripts scripts for processing data related to millions of phone numbers from different carriers in India. These scripts would convert data from one format to another, find errors with the aim to discover unusual discrepancies. Major part of these shell scripts were written using 'awk'. " + "<br><br>" +
                  "Next, I helped our team in testing an application. Our team was porting an application from one framework to another. My primary goal was to make sure all the functionalities are present in the new framework and they work exactly the way it used to work in the old one. I developed very strong test cases, carried out manual testing, and maintained an excel sheet with results.",
         icon: "img/tcs.png"
     }
@@ -66,7 +73,7 @@ window.setInterval(function() {
         slideHeaderChild();
     }
     this.scrollHappen = false;
-},250);
+}, 250);
 
 function mainInitialize() {
     myAjaxCall("pages/home.html", "replace");
@@ -76,6 +83,8 @@ function mainInitialize() {
     this.timer = rotateCoverImage();
     this.skills = false;
     this.copyright = false;
+    resetScroll();
+    enableShadowForHeaderChild(true);
 }
 
 function updateScreenSizeInformation() {
@@ -113,6 +122,7 @@ function updateScreenSizeInformation() {
 function slideHeaderChild() {
     updateScreenSizeInformation();
     var myDiv = document.getElementById("header_child");
+    var myTable = document.getElementById('menu_table_id');
     var top = window.pageYOffset || document.documentElement.scrollTop;
 
     if(this.home) {
@@ -123,7 +133,7 @@ function slideHeaderChild() {
             myDiv.initialized = false;
         }
 
-        if ((page_height - global_height - top < 10) || (page_height - global_height < 10)) {
+        if ((page_height - global_height - top < 200) || (page_height - global_height < 200)) {
             if (!this.skills) {
                 myAjaxCall("pages/skills.html", "append");
                 this.skills = true;
@@ -133,8 +143,10 @@ function slideHeaderChild() {
             }
         }
     } else {
-        myDiv.style.top = 40;
-        if (page_height - global_height === top && !this.copyright) {
+        myDiv.style.top = '40px';
+        enableShadowForHeaderChild(false);
+
+        if (page_height - global_height == top && !this.copyright) {
             myAjaxCall("pages/copyright.html", "append");
             this.copyright = true;
         }
@@ -178,24 +190,81 @@ function changeCurrentDataToWork() {
     resetScroll();
 }
 
+function changeCurrentDataToEducation() {
+    myAjaxCall("pages/education.html", "replace");
+    this.copyright = false;
+    this.home = false;
+    this.skills = false;
+    resetScroll();
+}
+
+function changeCurrentDataToResearch() {
+    myAjaxCall("pages/research.html", "replace");
+    this.copyright = false;
+    this.home = false;
+    this.skills = false;
+    resetScroll();
+}
+
 function resetScroll() {
-        window.pageYOffset = 0;
-        document.documentElement.scrollTop = 0;
+    document.location = "#";
 }
 
 function changeCurrentDataToHome() {
     myAjaxCall("pages/home.html", "replace");
-    resetScroll();
     mainInitialize();
+}
+
+function getScrollY() {
+    if (typeof(window.pageYOffset) == 'number') {
+        //Netscape compliant
+        window.pageYOffset = 0;
+    } else if (document.body && document.body.scrollTop) {
+        //DOM compliant
+        document.body.scrollTop = 0;
+    } else if (document.documentElement && document.documentElement.scrollTop) {
+        //IE6 standards compliant mode
+        document.documentElement.scrollTop = 0;
+    }
 }
 
 function moveScrollTo(e) {
     var evt = getTargetObj(e);
     clearInterval(this.timer);
-
+    
     if (evt.target.id == "td1" || evt.target.id == "td1_img1") {
         changeCurrentDataToWork();
+    } else if (evt.target.id == "td2" || evt.target.id == "td2_img2") {
+        changeCurrentDataToEducation();
+    } else if (evt.target.id == "td3" || evt.target.id == "td3_img3") {
+        changeCurrentDataToResearch();
     } else if (evt.target.id == "td4" || evt.target.id == "td4_img4") {
         changeCurrentDataToHome();
+    }
+}
+
+/*
+ * The following function takes care of moving 
+ * the menu icon down 
+ */
+
+function moveHeaderChildDownOnDemand() {
+    var myDiv = document.getElementById("header_child");
+    if(myDiv.initialized != true) {
+        moveDivTag(myDiv, 10, -50, 40);       
+    }
+    
+    if(this.home) {
+        enableShadowForHeaderChild(true);
+    }
+}
+
+function enableShadowForHeaderChild(bool) {
+    var myTable = document.getElementById('menu_table_id');
+    if(bool) {
+        myTable.style.boxShadow = '2px 2px 5px #888888';
+    }
+    else {
+        myTable.style.boxShadow = '0px 0px 0px #FFFFFF';
     }
 }

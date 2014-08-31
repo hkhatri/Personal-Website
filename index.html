@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+    <meta name="Hilay Khatri" description="Personal Website"></meta>
+    
+<head lang="en">
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/widget.css">
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/widget.js"></script>
+    <script type="text/javascript" src="js/moveDiv.js"></script>
+    <script type="text/javascript" src="js/rotateImage.js"></script>
+    <script type="text/javascript" src="js/onConnectIcons.js"></script>
+    <script type="text/javascript" src="js/dynamicPageLoad.js"></script>
+    <title>Hilay Khatri</title>
+</head>
+
+<body id="main_body_id" class="body_class" onload="mainInitialize();">
+
+<div id="header" class="header_class" onmouseover='moveHeaderChildDownOnDemand()'> Hilay Khatri </div>
+
+<div class="header_child_wrapper_class">
+    <div id="header_child" class="header_child_class">
+        <table id="menu_table_id" class="menu_table_class" style="width: 100%; background-color: #EFEFE7; box-shadow: 2px 2px 5px #888888;">
+            <tr id="menu_icons_row_id" class="menu_icons_row_class" onclick="moveScrollTo(event);"  onmouseover='changeBGColorMouseOver(event)' onmouseout='changeBGColorMouseOut(event)'>
+                <td id="td4" align="center" style="width: 25%; color: #888888"><img id="td4_img4" class="menu_icons_class" src="img/home.png" alt=""/> <br> Home</td>
+                <td id="td1" align="center" style="width: 25%; color: #888888;"><img id="td1_img1" class="menu_icons_class" src="img/work.png" alt=""/> <br> Work</td>
+                <td id="td2" align="center" style="width: 25%; color: #888888;"><img id="td2_img2" class="menu_icons_class" src="img/education.png" alt=""/> <br> Education</td>
+                <td id="td3" align="center" style="width: 25%; color: #888888;"><img id="td3_img3" class="menu_icons_class" src="img/play.png" alt=""/> <br> Research</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div id="main_content_id" class="main_content"></div>
+
+</body>
+</html>

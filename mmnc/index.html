@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if (gt IE 8)|!(IE)]><!--> <html class=""> <!--<![endif]-->
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <script type="text/javascript" src="js/d3.js"></script>
+    <script type="text/javascript" src="js/d3.geo.js"></script>
+    <script type="text/javascript" src="js/d3.geom.js"></script> 
+    <script type="text/javascript" src="js/d3.csv.js"></script>
+    <script type="text/javascript" src="js/d3.layout.js"></script>
+    <script src="js/yui-min.js"></script>
+    <script type="text/javascript" src="js/visualization.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/visualization.css" /> 
+    <title> North Carolina Missing Meals By County </title>
+  </head>
+  
+<body class="yui3-skin-sam" onload="initializeVisualization();">
+
+    <label class="viz-title">North Carolina Missing Meals By County</label>
+    <div style="border: 5px; border-color: black; z-index: 100" id="visualization" ></div>
+    <table width="50%" class="table1" align="center">
+            <tr>
+                <td>Unemployment</td>
+                <td></td>
+                <td></td>
+                <td>Year</td>
+            </tr>
+
+            <tr>
+                <td width="20%"><span id="slider-tick-parent_month"></span></td>
+                <td width="10"></td>
+                <td><label class="slider-tick-lbl" id="x-tick-lbl_month">5%</label></td>
+                <td width="20%"><span id="slider-tick-parent_year"></span></td>
+                <td width="10"></td>
+                <td><label class="slider-tick-lbl" id="x-tick-lbl_year">2007</label></td>            
+            </tr>
+    </table>
+</body>
+</html>

@@ -72,7 +72,7 @@ function infoWidget(data, parent) {
              this._html.appendChild(wrapper);
         }
     var empty = document.createElement("div");
-    empty.style.height = "130px";
+    empty.style.height = "135px";
 
     this.parent.innerHTML = "";
     this.parent.appendChild(empty);

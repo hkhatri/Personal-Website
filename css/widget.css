@@ -7,6 +7,8 @@
     border-bottom: 2px;
     border-style:solid;
     border-color:#E0E0D1;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .widget_main_data_content_header {

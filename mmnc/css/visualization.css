@@ -1,0 +1,54 @@
+svg.map {
+position:absolute;
+left:400px;
+width: 900px;
+top:50px;
+height: 500px;
+z-index:1;
+box-shadow: 1px 1px 5px #888888;
+border: 50px;
+border-color: #444444;
+}
+
+svg.legend {
+position:absolute;
+top: 40px;
+z-index:0;
+left: 10px;
+height: 500px;
+}
+
+table.table1{
+position:relative;
+top:550px;
+left: 100px;
+}
+
+
+#counties path {
+  stroke: #fff;
+  stroke-width: .25px;
+}
+
+#states path {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+label.slider-tick-lbl {
+  display: block;
+  float: left;
+  margin-right: 10px;
+  text-align: left;
+  width: 50px;
+}
+
+label.viz-title {
+  position: absolute;
+  display: block;
+  left: 40%;
+  font-weight: bold;
+  font-size: x-large;
+  text-align: center;
+}

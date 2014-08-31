@@ -36,6 +36,16 @@ function openThesisApp() {
     window.open("http://www.lib.ncsu.edu/resolver/" + uname, '_blank');
 }
 
+function openMMNCApp() {
+    var uname = "M-BRwIWFlhY";
+    window.open("http://youtu.be/" + uname, '_blank');
+}
+
+function openNCBPApp() {
+    var uname = "M-BRwIWFlhY";
+    window.open("doc/ncbp.png", '_blank');
+}
+
 function connectOnClick(e) {
     var evt = getTargetObj(e);
 
@@ -52,4 +62,23 @@ function connectOnClick(e) {
     } else if (evt.target.id == "thesis_icon_id") {
         openThesisApp();
     }
+}
+
+function openThesisApp() {
+    var uname = "1840.16/8393";
+    window.open("http://www.lib.ncsu.edu/resolver/" + uname, '_blank');
+}
+
+function openMMNCApp() {
+    var uname = "M-BRwIWFlhY";
+    window.open("http://youtu.be/" + uname, '_blank');
+}
+
+function openNCBPApp() {
+    var uname = "M-BRwIWFlhY";
+    window.open("doc/ncbp.png", '_blank');
+}
+
+function openPresentationApp() {
+    window.open("doc/HilayKhatri-thesis.pptx", '_blank');
 }
