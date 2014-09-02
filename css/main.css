@@ -7,7 +7,7 @@
     background: blue;
     display: block;
     font-size: 2em;
-    font-family: "Brush Script MT", cursive;
+    font-family: Georgia, serif;
     background-image:url('../img/blue_gradient.jpg');
     background-repeat:repeat-x;
     background-size: 1800px 50px;
@@ -42,8 +42,10 @@ tr.menu_icons_row_class td:first-child, tr.menu_icons_row_class td:first-child +
 
 
 .menu_icons_class {
-    width: 50px;
-    height: 55px;
+    width: 35px;
+    height: 35px;
+    padding-top: 5px;
+    margin-left: 3px;
 }
 
 .body_class {
